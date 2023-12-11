@@ -110,5 +110,8 @@
     <symbol id="frame-icon" viewBox="0 0 24 24">
       <path d="M24 2 0 13.25l7.67 2.367L19.5 6.375l-8.998 10.116.007.003-.009-.003V22l4.301-4.182 5.45 1.682L24 2Z" />
     </symbol>
+     <symbol id="icon-burger" viewBox="0 0 32 32" >
+      <path d="M1.34766 20.0431H30.8861M1.34766 10.7354H30.8861M1.34766 1.42773H30.8861" stroke="#2E2F42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
   </defs>
 </svg>
