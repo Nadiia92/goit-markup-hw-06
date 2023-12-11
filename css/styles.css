@@ -128,6 +128,75 @@ img {
   color: var(--title-text-color);
 }
 
+/* =========== MOBILE HERO STYLE ============ */
+
+.hero {
+  background-color: #2e2f42;
+  background-position: center;
+  width: 288px;
+  height: 432px;
+  width: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/mobile/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 280px),
+  screen and (min-resolution: 2dppx) and (min-width: 280px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 280px) {
+  .section-one {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile/hero-mobile@2x.jpg);
+  }
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+  max-width: 169px;
+  margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background: #4d5ae5;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 72px;
+}
+
+/* =========== /MOBILE HERO STYLE ============ */
+
 @media screen and (max-width: 767px) {
   .mobile-menu-open-btn {
     background-color: transparent;
@@ -254,19 +323,120 @@ img {
     display: none;
   }
 
+  .logo {
+    margin-right: 120px;
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+  }
+
   .nav {
     display: flex;
+    width: 261px;
+    margin-right: auto;
+  }
+
+  .site-nav .link.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
   }
 
   .site-nav {
     display: flex;
+    gap: 40px;
+  }
+
+  .site-nav .link {
+    color: #2e2f42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
+  }
+
+  .current {
+    position: relative;
+    color: #404bbf;
+  }
+
+  .site-nav .link:hover,
+  .site-nav .link:focus {
+    color: var(--hero-hover-color);
   }
 
   .address {
     display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .info-link {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    color: #434455;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .address .info-link:hover,
+  .address .info-link:focus {
+    color: #404bbf;
   }
 
   /* =========== /tablet-header-styles============= */
+
+  /*  ==========TABLET HERO STYLE ======== */
+
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet/hero-tablet.jpg);
+    padding: 112px 0;
+  }
+
+  @media screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .section-one {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile/hero-tablet@2x.jpg);
+  }
+
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+
+  .hero-button:hover,
+  .hero-button:focus {
+    background-color: #404bbf;
+  }
+  /*  ========== /TABLET HERO STYLE ======== */
 }
 @media screen and (min-width: 1158px) {
   .container {
@@ -275,5 +445,37 @@ img {
 
   /* ===========desktop-header-styles============= */
 
+  .logo {
+    margin-right: 76px;
+  }
+
+  .address {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    font-style: normal;
+  }
+
+  .mail-tel {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+  }
+
   /* =========== /desktop-header-styles============= */
+  
+  /*  =========== DESKTOP HERO STYLE ================= */
+
+  .hero {
+    background-image: linear-gradient(to bottom,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), url(../images/desktop/hero-desktop.jpg);
+    }
+    
+    .hero-title {
+    margin-bottom: 48px;
+    }
+
+   /*  =========== DESKTOP HERO STYLE ================= */
+
 }
