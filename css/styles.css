@@ -397,6 +397,7 @@ footer .logo {
 .footer-part {
   text-align: center;
   margin-right: 0;
+  margin-bottom: 72px;
 }
 
 .footer-part-text {
@@ -1056,6 +1057,7 @@ footer .logo {
     }
 
     .footer-part {
+      margin-bottom: 0;
       width: 264px;
       text-align: start;
     }
